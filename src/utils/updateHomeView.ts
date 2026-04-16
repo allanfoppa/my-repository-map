@@ -4,7 +4,11 @@ import { filterRepositories } from "./filter"
 import { paginate, totalPages } from "./pagination"
 import { repositories } from "../data/repositories"
 
-export function update(searchQuery: string, currentPage: number, perPage: number) {
+export function update(
+  searchQuery: string,
+  currentPage: number,
+  perPage: number
+) {
   const filtered = filterRepositories(repositories, searchQuery)
   const paginated = paginate(filtered, currentPage, perPage)
   const pages = totalPages(filtered.length, perPage)
@@ -13,5 +17,7 @@ export function update(searchQuery: string, currentPage: number, perPage: number
 
   container.innerHTML = HomeView(paginated, pages, currentPage)
 
-  bindPaginationEvents(currentPage, () => update(searchQuery, currentPage, perPage))
+  bindPaginationEvents((page) => {
+    update(searchQuery, page, perPage)
+  })
 }
