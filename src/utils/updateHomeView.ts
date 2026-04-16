@@ -15,7 +15,7 @@ export function update(
 
   const container = document.querySelector('#results-container')!
 
-  container.innerHTML = HomeView(paginated, pages, currentPage)
+  container.innerHTML = HomeView(paginated, pages, currentPage, searchQuery)
 
   bindPaginationEvents((page) => {
     update(searchQuery, page, perPage)
