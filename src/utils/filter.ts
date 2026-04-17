@@ -16,7 +16,7 @@ export function filterRepositories(
         ${repo.category}
       `.toLowerCase()
 
-      const tagsText = repo.tags.join(' ').toLowerCase()
+      const tagsText = repo.tags.map(t => t.label).join(' ').toLowerCase()
 
       const matchedReferences = repo.references?.filter(ref =>
         ref.description.toLowerCase().includes(q)

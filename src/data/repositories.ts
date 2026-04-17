@@ -1,32 +1,5 @@
-export const CATEGORY_MAP = {
-  ai: 'AI',
-  'augmented-reality': 'Augmented Reality',
-  'data-science': 'Data Science',
-  'virtual-reality': 'Virtual Reality',
-  'web-development': 'Web Development'
-} as const
-
-export const TAGS_MAP = {
-  bdd: 'BDD',
-  jest: 'Jest',
-  cypress: 'Cypress',
-  microservices: 'Microservices',
-  react: 'React',
-  angular: 'Angular',
-  vue: 'Vue',
-  docker: 'Docker',
-  websocket: 'Websocket',
-  node: 'NodeJS',
-  mysql: 'MySql',
-  solidjs: 'SolidJS',
-  vite: 'Vite',
-  tailwind: 'TailwindCSS',
-  daisyui: 'DaisyUI'
-}
-
-export type ID = keyof typeof CATEGORY_MAP
-
-export type Category = (typeof CATEGORY_MAP)[keyof typeof CATEGORY_MAP]
+import { CATEGORY_MAP } from "../constants/categoryMap"
+import { TAGS_MAP } from "../constants/tagsMap"
 
 export type Reference = {
   description: string
@@ -34,10 +7,10 @@ export type Reference = {
 }
 
 export type RepoItem = {
-  id: ID
+  id: keyof typeof CATEGORY_MAP
   title: string
   description: string
-  category: Category
+  category: (typeof CATEGORY_MAP)[keyof typeof CATEGORY_MAP]
   tags: (typeof TAGS_MAP)[keyof typeof TAGS_MAP][]
   references?: Reference[]
   link: string

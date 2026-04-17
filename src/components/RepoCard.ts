@@ -25,6 +25,23 @@ export function RepoCard(repo: RepoItem, query: string): string {
         </a>
       </div>
 
+      <!-- TAGS (MIDDLE ROW) -->
+      ${
+        repo.tags?.length
+          ? `
+        <div class="border-t border-gray-200 pt-4">
+          <p class="text-sm text-gray-400 my-2">Tags</p>
+          <div class="space-y-2 my-4">
+          ${repo.tags.map(tag => `
+            <span class="py-1 px-3 mx-1 rounded-md ${tag.color} text-white font-medium text-xs shadow-sm shadow-blue-100 transition-transform hover:scale-105 cursor-default">
+              ${highlight(tag.label, query)}
+            </span>
+          `).join('')}
+          </div>
+        </div>
+      `
+        : ''
+      }
       <!-- REFERENCES (BOTTOM ROW) -->
       ${
         repo.references?.length

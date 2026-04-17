@@ -8,7 +8,7 @@ export function SearchBar(): string {
         <input
           id="search"
           type="text"
-          placeholder="Filter by repository name or technology..."
+          placeholder="Filter by repository name, description, tag or reference..."
           class="flex-1 px-4 py-3 bg-transparent outline-none text-gray-700 placeholder:text-gray-400"
         />
       </div>
