@@ -16,6 +16,7 @@ export function Pagination(
                 ? 'bg-blue-600 text-white'
                 : 'bg-white hover:bg-gray-100'}
             "
+            data-testid="pagination-button-page-${p}"
           >
             ${p}
           </button>

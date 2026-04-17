@@ -3,12 +3,21 @@ import { highlight } from '../utils/highlight'
 
 export function RepoCard(repo: RepoItem, query: string): string {
   return `
-    <div class="premium-card p-6 group space-y-4">
+    <div class="premium-card p-6 group space-y-4 hover:border-blue-500">
 
-      <!-- REPO INFO (TOP ROW) -->
+      <!-- CATEGORY -->
+      <div class="border-b border-gray-200 pb-4">
+        <p class="text-sm text-gray-400 my-2">Category</p>
+        <h3 class="text-lg font-semibold text-gray-800 flex items-center gap-3">
+          ${repo.category}
+        </h3>
+      </div>
+
+      <!-- REPO INFO -->
       <div class="flex justify-between items-center">
         <div class="flex-1">
-          <h3 class="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
+          <p class="text-sm text-gray-400 my-2">Title</p>
+          <h3 class="text-lg font-bold text-gray-900 transition-colors">
             ${highlight(repo.title, query)}
           </h3>
           <p class="text-sm text-gray-500 mt-1 max-w-xl">
@@ -19,13 +28,14 @@ export function RepoCard(repo: RepoItem, query: string): string {
         <a
           href="${repo.link}"
           target="_blank"
+          rel="noopener noreferrer"
           class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gray-50 text-gray-600 font-medium text-sm transition-all hover:bg-blue-600 hover:text-white"
         >
           View Repository →
         </a>
       </div>
 
-      <!-- TAGS (MIDDLE ROW) -->
+      <!-- TAGS -->
       ${
         repo.tags?.length
           ? `
@@ -42,7 +52,7 @@ export function RepoCard(repo: RepoItem, query: string): string {
       `
         : ''
       }
-      <!-- REFERENCES (BOTTOM ROW) -->
+      <!-- REFERENCES -->
       ${
         repo.references?.length
           ? `
@@ -58,6 +68,7 @@ export function RepoCard(repo: RepoItem, query: string): string {
                 <a
                   href="${ref.link}"
                   target="_blank"
+                  rel="noopener noreferrer"
                   class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gray-50 text-gray-600 font-medium text-sm transition-all hover:bg-blue-600 hover:text-white"
                 >
                   View Code →
