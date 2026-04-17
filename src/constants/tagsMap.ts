@@ -118,6 +118,10 @@ export const TAGS_MAP = {
     label: 'Sass',
     color: 'bg-pink-500'
   },
+  chakraui: {
+    label: 'Chakra UI',
+    color: 'bg-teal-500'
+  },
 
   // Languages
   typescript: {

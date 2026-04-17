@@ -18,6 +18,44 @@ export type RepoItem = {
 
 export const repositories: RepoItem[] = [
   {
+    id: 'web-development',
+    title: 'Pokemon Jokenpo',
+    description: 'My first project in React, a game adapted from the Pokémon franchise.',
+    category: CATEGORY_MAP['web-development'],
+    tags: [TAGS_MAP.react, TAGS_MAP.node, TAGS_MAP.mysql, TAGS_MAP.docker],
+    link: 'https://github.com/allanfoppa/pokemon-jokenpo'
+  },
+  {
+    id: 'web-development',
+    title: 'Chuck Norris Approved',
+    description: 'Small web application with Chuck Norris jokes, being my first contact with SolidJS.',
+    category: CATEGORY_MAP['web-development'],
+    tags: [TAGS_MAP.solidjs, TAGS_MAP.vite, TAGS_MAP.tailwind, TAGS_MAP.daisyui],
+    link: 'https://github.com/allanfoppa/chuck-norris-approved'
+  },
+  {
+    id: 'web-development',
+    title: 'INS\'T A TO-DO LIST',
+    description: 'Registration of people in a to-do list like in real time.',
+    category: CATEGORY_MAP['web-development'],
+    tags: [TAGS_MAP.nestjs, TAGS_MAP.react, TAGS_MAP.websocket, TAGS_MAP.chakraui],
+    link: 'https://github.com/allanfoppa/websocket-with-nestjs-and-reactjs',
+    references: [
+      {
+        description: 'Implement websocket with Nestjs',
+        link: 'https://github.com/allanfoppa/websocket-with-nestjs-and-reactjs/tree/main/websocket/src/components/people'
+      },
+      {
+        description: 'Implement websocket with React context API',
+        link: 'https://github.com/allanfoppa/websocket-with-nestjs-and-reactjs/blob/main/client/src/contexts/WebsocketContext.js'
+      },
+      {
+        description: 'CRUD operations with websocket',
+        link: 'https://github.com/allanfoppa/websocket-with-nestjs-and-reactjs/blob/main/client/src/App.js'
+      }
+    ]
+  },
+  {
     id: 'augmented-reality',
     title: 'Plant-AR',
     description: 'Augmented reality application for plant identification and care',
@@ -76,21 +114,5 @@ export const repositories: RepoItem[] = [
       }
     ],
     link: 'https://github.com/allanfoppa/eda-nps'
-  },
-  {
-    id: 'web-development',
-    title: 'Pokemon Jokenpo',
-    description: 'My first project in React, a game adapted from the Pokémon franchise.',
-    category: CATEGORY_MAP['web-development'],
-    tags: [TAGS_MAP.react, TAGS_MAP.node, TAGS_MAP.mysql, TAGS_MAP.docker],
-    link: 'https://github.com/allanfoppa/pokemon-jokenpo'
-  },
-  {
-    id: 'web-development',
-    title: 'Chuck Norris Approved',
-    description: 'Small web application with Chuck Norris jokes, being my first contact with SolidJS.',
-    category: CATEGORY_MAP['web-development'],
-    tags: [TAGS_MAP.solidjs, TAGS_MAP.vite, TAGS_MAP.tailwind, TAGS_MAP.daisyui],
-    link: 'https://github.com/allanfoppa/chuck-norris-approved'
   }
 ]
