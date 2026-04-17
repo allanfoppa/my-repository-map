@@ -23,6 +23,18 @@ export const TAGS_MAP = {
     color: 'bg-teal-500'
   },
 
+  // AR
+  augmentedreality: {
+    label: 'Augmented Reality',
+    color: 'bg-green-500'
+  },
+
+  // VR
+  virtualreality: {
+    label: 'Virtual Reality',
+    color: 'bg-blue-500'
+  },
+
   // Frontend
   react: {
     label: 'React',
@@ -122,6 +134,10 @@ export const TAGS_MAP = {
     label: 'Chakra UI',
     color: 'bg-teal-500'
   },
+  styledcomponents: {
+    label: 'Styled Components',
+    color: 'bg-pink-500'
+  },
 
   // Languages
   typescript: {
@@ -130,11 +146,29 @@ export const TAGS_MAP = {
   },
   javascript: {
     label: 'JavaScript',
-    color: 'bg-amber-500' // careful: still safe vs strong yellow highlight
+    color: 'bg-amber-500'
   },
   python: {
     label: 'Python',
-    color: 'bg-yellow-600' // darker to avoid clash
+    color: 'bg-green-600'
+  },
+
+  // Data science
+  pandas: {
+    label: 'Pandas',
+    color: 'bg-orange-500'
+  },
+  numpy: {
+    label: 'Numpy',
+    color: 'bg-rose-500'
+  },
+  matplotlib: {
+    label: 'Matplotlib',
+    color: 'bg-slate-500'
+  },
+  seaborn: {
+    label: 'Seaborn',
+    color: 'bg-violet-500'
   },
 
   // Misc

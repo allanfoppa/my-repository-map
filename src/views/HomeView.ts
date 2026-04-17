@@ -1,4 +1,4 @@
-import type { RepoItem } from '../data/repositories'
+import type { RepoItem } from '../types/repositories'
 import { Pagination } from '../components/Pagination'
 import { Section } from '../components/Section'
 

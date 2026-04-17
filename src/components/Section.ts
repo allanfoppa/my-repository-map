@@ -1,4 +1,4 @@
-import type { RepoItem } from '../data/repositories'
+import type { RepoItem } from '../types/repositories'
 import { RepoCard } from './RepoCard'
 
 export function Section(repos: RepoItem[], query: string): string {

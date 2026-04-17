@@ -1,4 +1,4 @@
-import type { RepoItem } from '../data/repositories'
+import type { RepoItem } from '../types/repositories'
 import { highlight } from '../utils/highlight'
 
 export function RepoCard(repo: RepoItem, query: string): string {

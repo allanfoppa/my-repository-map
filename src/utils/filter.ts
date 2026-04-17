@@ -1,4 +1,4 @@
-import type { RepoItem } from '../data/repositories'
+import type { RepoItem } from '../types/repositories'
 
 export function filterRepositories(
   repos: RepoItem[],
