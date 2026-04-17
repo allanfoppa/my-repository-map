@@ -1,6 +1,6 @@
 import type { RepoItem } from '../types/repositories'
 import { Pagination } from '../components/Pagination'
-import { Section } from '../components/Section'
+import { RepoContainer } from '../components/RepoContainer'
 
 export function HomeView(
   repos: RepoItem[],
@@ -11,7 +11,7 @@ export function HomeView(
 
   return `
     <section id="home-view" data-testid="home-view">
-      ${Section(repos, query)}
+      ${RepoContainer(repos, query)}
       ${Pagination(pages, currentPage)}
     </section>
   `
