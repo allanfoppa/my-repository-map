@@ -12,6 +12,10 @@ export const TAGS_MAP = {
     label: 'Cypress',
     color: 'bg-emerald-600'
   },
+  playwright: {
+    label: 'Playwright',
+    color: 'bg-blue-500'
+  },
 
   // Architecture
   microservices: {
@@ -102,6 +106,18 @@ export const TAGS_MAP = {
     label: 'CI/CD',
     color: 'bg-slate-600'
   },
+  github_actions: {
+    label: 'GitHub Actions',
+    color: 'bg-purple-500'
+  },
+  github_workflows: {
+    label: 'GitHub Workflows',
+    color: 'bg-blue-500'
+  },
+  github_composite_actions: {
+    label: 'GitHub Composite Actions',
+    color: 'bg-green-500'
+  },
 
   // Tooling
   vite: {
@@ -115,6 +131,14 @@ export const TAGS_MAP = {
   rsbuild: {
     label: 'Rsbuild',
     color: 'bg-orange-500'
+  },
+  pnpm: {
+    label: 'pnpm',
+    color: 'bg-orange-500'
+  },
+  prompt: {
+    label: 'Prompt',
+    color: 'bg-gray-500'
   },
 
   // Styling
@@ -151,6 +175,12 @@ export const TAGS_MAP = {
   python: {
     label: 'Python',
     color: 'bg-green-600'
+  },
+
+  // AI
+  ai: {
+    label: 'AI',
+    color: 'bg-purple-500'
   },
 
   // Data science

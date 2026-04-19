@@ -1,4 +1,5 @@
 import type { RepoItem } from "../types/repositories"
+import { aiQaTestingHub } from "./repositories/ai-qa-testing-hub"
 import { chuckNorrisApproved } from "./repositories/chuck-norris-approved"
 import { edaNps } from "./repositories/eda-nps"
 import { edaPokemon } from "./repositories/eda-pokemon"
@@ -16,5 +17,6 @@ export const repositories: RepoItem[] = [
   plantAr,
   geologyVrForOliAndGasTraining,
   edaPokemon,
-  edaNps
+  edaNps,
+  aiQaTestingHub
 ]
