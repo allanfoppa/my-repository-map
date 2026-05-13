@@ -71,6 +71,20 @@ export const TAGS_MAP = {
     color: "bg-gray-600",
   },
 
+  // Web tools
+  postman: {
+    label: "Postman",
+    color: "bg-orange-500",
+  },
+  insomnia: {
+    label: "Insomnia",
+    color: "bg-pink-500",
+  },
+  swagger: {
+    label: "Swagger",
+    color: "bg-yellow-500",
+  },
+
   // Databases
   mysql: {
     label: "MySQL",
@@ -120,6 +134,14 @@ export const TAGS_MAP = {
   },
 
   // Tooling
+  git: {
+    label: "Git",
+    color: "bg-gray-700",
+  },
+  versioncontrol: {
+    label: "Version Control",
+    color: "bg-gray-600",
+  },
   npm: {
     label: "NPM",
     color: "bg-red-500",
@@ -150,6 +172,24 @@ export const TAGS_MAP = {
   },
   formatting: {
     label: "Formatting",
+    color: "bg-gray-600",
+  },
+  cli: {
+    label: "CLI",
+    color: "bg-gray-500",
+  },
+
+  // OS
+  linux: {
+    label: "Linux",
+    color: "bg-green-600",
+  },
+  windows: {
+    label: "Windows",
+    color: "bg-blue-600",
+  },
+  macos: {
+    label: "macOS",
     color: "bg-gray-600",
   },
 
@@ -189,6 +229,24 @@ export const TAGS_MAP = {
     color: "bg-green-600",
   },
 
+  // Protocols
+  http: {
+    label: "HTTP",
+    color: "bg-blue-500",
+  },
+  https: {
+    label: "HTTPS",
+    color: "bg-green-500",
+  },
+  tcp: {
+    label: "TCP",
+    color: "bg-gray-500",
+  },
+  udp: {
+    label: "UDP",
+    color: "bg-yellow-500",
+  },
+
   // AI
   ai: {
     label: "AI",
@@ -211,6 +269,12 @@ export const TAGS_MAP = {
   seaborn: {
     label: "Seaborn",
     color: "bg-violet-500",
+  },
+
+  // Web
+  web_development: {
+    label: "Web Development",
+    color: "bg-blue-500",
   },
 
   // Misc

@@ -4,19 +4,69 @@ import type { DocItem } from "../types/documentation";
 
 export const documentation: DocItem[] = [
   {
-    id: "blockquote",
-    title: "Mastering Blockquotes in Markdown",
+    id: "git",
+    title: "Git Basics",
     summary:
-      "A guide on how to use blockquotes effectively in Markdown for better content structuring.",
+      "An introduction to Git, covering basic commands and workflows for version control.",
+    category: CATEGORY_MAP.tooling,
+    tags: [TAGS_MAP.git, TAGS_MAP.versioncontrol],
+  },
+  {
+    id: "commit",
+    title: "How to Write a Good Commit Message",
+    summary:
+      "Best practices for writing clear and informative commit messages in version control systems.",
+    category: CATEGORY_MAP.tooling,
+    tags: [TAGS_MAP.git],
+  },
+  {
+    id: "markdown",
+    title: "Markdown Guide",
+    summary: "A guide on how to use Markdown for better content structuring.",
     category: CATEGORY_MAP.markdown,
     tags: [TAGS_MAP.markdown, TAGS_MAP.formatting],
   },
   {
-    id: "npm_tips",
+    id: "command_line_tips",
+    title: "Command Line Tips for Linux",
+    summary:
+      "Useful tips and tricks for navigating and working with the command line in Linux.",
+    category: CATEGORY_MAP["operating-systems"],
+    tags: [TAGS_MAP.cli, TAGS_MAP.linux],
+  },
+  {
+    id: "npm",
     title: "NPM Publishing & Tips",
     summary:
       "A comprehensive guide on how to publish packages to NPM and maintain versioning.",
     category: CATEGORY_MAP.tooling,
     tags: [TAGS_MAP.npm, TAGS_MAP.javascript],
+  },
+  {
+    id: "issues",
+    title: "Effective Issue Management",
+    summary:
+      "Strategies for managing and triaging issues in software projects using platforms like GitHub.",
+    category: CATEGORY_MAP.tooling,
+    tags: [TAGS_MAP.github_workflows, TAGS_MAP.git],
+  },
+  {
+    id: "mime_types",
+    title: "Common MIME Types",
+    summary:
+      "A reference guide to common MIME types used in web development and APIs.",
+    // Opção 1: CATEGORY_MAP.web (Ideal) ou CATEGORY_MAP.networking
+    // Opção 2: CATEGORY_MAP.tooling (Se não tiver as opções acima)
+    category: CATEGORY_MAP.web,
+    // Sugestão de tags corretas para o contexto de redes/web:
+    tags: [TAGS_MAP.https, TAGS_MAP.web_development],
+  },
+  {
+    id: "postman_basic_tests",
+    title: "Postman Basic Tests",
+    summary:
+      "An introduction to writing basic tests in Postman for API validation.",
+    category: CATEGORY_MAP.tooling,
+    tags: [TAGS_MAP.rest, TAGS_MAP.postman],
   },
 ];

@@ -3,11 +3,9 @@ export async function loadDocumentationContent(
   category: string,
 ): Promise<string> {
   const baseUrl = import.meta.env.BASE_URL;
-
-  // Combine base, folder path, and filename
-  // We use .replace to ensure we don't have double slashes (//)
+  const sanitizedCategory = category.toLocaleLowerCase().replace(/\s+/g, "-");
   const fullPath =
-    `${baseUrl}/documentation/${category.toLocaleLowerCase()}/${docId}.md`.replace(
+    `${baseUrl}/documentation/${sanitizedCategory}/${docId}.md`.replace(
       /\/+/g,
       "/",
     );

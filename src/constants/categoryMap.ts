@@ -34,6 +34,11 @@ export const CATEGORY_MAP = {
   tooling: "Tooling",
   markdown: "Markdown",
 
+  "operating-systems": "Operating Systems",
+
   "open-source": "Open Source",
   learning: "Learning",
+
+  web: "Web",
+  networking: "Networking",
 } as const;
