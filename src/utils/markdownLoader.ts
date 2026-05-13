@@ -2,18 +2,28 @@ export async function loadDocumentationContent(
   docId: string,
   category: string,
 ): Promise<string> {
-  try {
-    // Path relative to public/assets or build directory
-    const response = await fetch(
-      `/documentation/${category.toLocaleLowerCase()}/${docId}.md`,
+  const baseUrl = import.meta.env.BASE_URL;
+
+  // Combine base, folder path, and filename
+  // We use .replace to ensure we don't have double slashes (//)
+  const fullPath =
+    `${baseUrl}/documentation/${category.toLocaleLowerCase()}/${docId}.md`.replace(
+      /\/+/g,
+      "/",
     );
-    if (!response.ok) throw new Error("Documentation file not found");
 
-    const markdown = await response.text();
+  try {
+    const response = await fetch(fullPath);
 
-    return markdown;
+    if (!response.ok) {
+      throw new Error(
+        `Failed to fetch: ${fullPath} (Status: ${response.status})`,
+      );
+    }
+
+    return await response.text();
   } catch (error) {
-    console.error("Failed to load doc:", error);
-    return "Error loading content.";
+    console.error("Markdown Loader Error:", error);
+    throw error;
   }
 }
