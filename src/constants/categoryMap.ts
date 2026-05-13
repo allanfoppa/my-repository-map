@@ -1,38 +1,39 @@
 export const CATEGORY_MAP = {
-  'ai': 'AI',
-  'machine-learning': 'Machine Learning',
-  'data-science': 'Data Science',
+  ai: "AI",
+  "machine-learning": "Machine Learning",
+  "data-science": "Data Science",
 
-  'web-development': 'Web Development',
-  'frontend': 'Frontend',
-  'backend': 'Backend',
-  'fullstack': 'Fullstack',
+  "web-development": "Web Development",
+  frontend: "Frontend",
+  backend: "Backend",
+  fullstack: "Fullstack",
 
-  'mobile-development': 'Mobile Development',
+  "mobile-development": "Mobile Development",
 
-  'game-development': 'Game Development',
-  'virtual-reality': 'Virtual Reality',
-  'augmented-reality': 'Augmented Reality',
+  "game-development": "Game Development",
+  "virtual-reality": "Virtual Reality",
+  "augmented-reality": "Augmented Reality",
 
-  'cloud-computing': 'Cloud Computing',
-  'devops': 'DevOps',
-  'microservices': 'Microservices',
+  "cloud-computing": "Cloud Computing",
+  devops: "DevOps",
+  microservices: "Microservices",
 
-  'software-architecture': 'Software Architecture',
-  'system-design': 'System Design',
+  "software-architecture": "Software Architecture",
+  "system-design": "System Design",
 
-  'testing': 'Testing',
-  'qa': 'Quality Assurance',
+  testing: "Testing",
+  qa: "Quality Assurance",
 
-  'security': 'Security',
-  'authentication': 'Authentication',
+  security: "Security",
+  authentication: "Authentication",
 
-  'data-engineering': 'Data Engineering',
-  'databases': 'Databases',
+  "data-engineering": "Data Engineering",
+  databases: "Databases",
 
-  'automation': 'Automation',
-  'tooling': 'Tooling',
+  automation: "Automation",
+  tooling: "Tooling",
+  markdown: "Markdown",
 
-  'open-source': 'Open Source',
-  'learning': 'Learning'
-} as const
+  "open-source": "Open Source",
+  learning: "Learning",
+} as const;

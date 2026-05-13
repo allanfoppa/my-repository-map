@@ -5,5 +5,5 @@ export function Header(): string {
         My Repository <span class="text-blue-600">Map</span>
       </h1>
     </header>
-  `
+  `;
 }

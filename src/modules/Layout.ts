@@ -1,17 +1,27 @@
-type LayoutProps = {
-  header: string
-  search: string
-  content: string
-}
+import { Drawer } from "../components/Drawer";
 
-export function Layout({ header, search, content }: LayoutProps): string {
+type LayoutProps = {
+  header: string;
+  navbar: string;
+  search: string;
+  content: string;
+};
+
+export function Layout({
+  header,
+  navbar,
+  search,
+  content,
+}: LayoutProps): string {
   return `
     <div class="min-h-screen py-8 px-6">
       <div class="max-w-4xl mx-auto">
         ${header}
+        ${navbar}
         ${search}
         ${content}
+        ${Drawer()}
       </div>
     </div>
-  `
+  `;
 }
