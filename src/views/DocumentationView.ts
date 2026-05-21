@@ -16,7 +16,7 @@ export function DocumentationView(
 
   const Container = () => {
     return `
-      <div class="grid gap-4">
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
         ${docCards}
       </div>
     `;

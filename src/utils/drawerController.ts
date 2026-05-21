@@ -3,28 +3,28 @@ import { loadDocumentationContent } from "./markdownLoader";
 
 export async function toggleDrawer(docId: string | null, category: string) {
   const drawer = document.querySelector("#doc-drawer")!;
+  const backdrop = document.querySelector("#drawer-backdrop")!;
   const contentArea = document.querySelector("#markdown-body")!;
+  const contentContainer = drawer.querySelector(".relative")!;
 
   if (!docId) {
-    // Logic to close drawer
-    drawer.classList.add("invisible");
+    closeDrawer();
     return;
   }
 
   try {
-    // Fetch markdown from data/documentation/${docId}.md
     const markdown = await loadDocumentationContent(docId, category);
     const markedContent = await marked.parse(markdown);
+    contentArea.innerHTML = markedContent;
 
-    // Clear previous content before inserting new rendered HTML
-    contentArea.innerHTML = "";
-
-    // Update UI
-    contentArea.insertAdjacentHTML("beforeend", markedContent);
-
-    // Show Drawer with Tailwind classes
+    // OPEN:
     drawer.classList.remove("invisible");
-    const contentContainer = drawer.querySelector(".relative")!;
+
+    // Backdrop now is visible and interable
+    backdrop.classList.remove("opacity-0", "pointer-events-none");
+    backdrop.classList.add("opacity-100");
+
+    // Translate the drawer
     contentContainer.classList.replace("translate-x-full", "translate-x-0");
   } catch (error) {
     console.error("Error toggling drawer:", error);
@@ -36,13 +36,16 @@ export function closeDrawer() {
   const backdrop = document.querySelector("#drawer-backdrop")!;
   const content = drawer.querySelector(".relative")!;
 
-  backdrop.classList.replace("opacity-100", "opacity-0");
+  // Closes backdrop
+  backdrop.classList.remove("opacity-100");
+  backdrop.classList.add("opacity-0", "pointer-events-none");
+
+  // Closes container
   content.classList.replace("translate-x-0", "translate-x-full");
 
-  // Wait for animation to finish before hiding container
+  // Turns invisible after animation
   setTimeout(() => drawer.classList.add("invisible"), 500);
 
-  // Remove the 'id' from URL to sync state
   const url = new URL(window.location.href);
   url.searchParams.delete("id");
   window.history.pushState({}, "", url);

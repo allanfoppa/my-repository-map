@@ -1,7 +1,8 @@
 import type { RepoItem } from "../types/repositories";
 import { highlight } from "../utils/highlight";
 import { CardSectionTitle } from "./CardSectionTitle";
-import { ArrowTopRightOnSquareIcon, Check } from "./Icons";
+import { ArrowTopRightOnSquareIcon, CheckIcon } from "./Icons";
+import { PortfolioTags } from "./PortfolioTags";
 
 export function PortfolioListItens(repo: RepoItem, query: string): string {
   return `
@@ -17,41 +18,22 @@ export function PortfolioListItens(repo: RepoItem, query: string): string {
       <!-- SHORT DESCRIPTION -->
       <div class="border-t border-gray-200">
         ${CardSectionTitle("What's about?")}
-        <p class="text-sm pb-4">${repo.description}</p>
+        <p class="text-sm pb-4">${highlight(repo.description, query)}</p>
       </div>
 
       <!-- TAGS -->
       <div class="border-t border-gray-200">
-        ${
-          repo.tags?.length
-            ? `
-          <div>
-            ${CardSectionTitle("Tags")}
-            <div class="flex flex-wrap">
-            ${repo.tags
-              .map(
-                (tag) => `
-              <span class="py-1 px-3 my-1 mx-1 rounded-md ${tag.color} text-white font-medium text-xs shadow-sm shadow-blue-100 transition-transform hover:scale-105 cursor-default">
-                ${highlight(tag.label, query)}
-              </span>
-            `,
-              )
-              .join("")}
-            </div>
-          </div>
-        `
-            : ""
-        }
+        ${PortfolioTags(repo, query)}
       </div>
 
       <div class="border-t border-gray-200">
         ${CardSectionTitle("What's inside?")}
         <p class="text-sm flex items-center">
-          ${Check("size-4 text-blue-600")}
+          ${CheckIcon("size-4 text-blue-600")}
           <span class="pl-1">4 High-quality screenshots</span>
         </p>
         <p class="text-sm mt-2 flex items-center">
-          ${Check("size-4 text-blue-600")}
+          ${CheckIcon("size-4 text-blue-600")}
           <span class="pl-1">Live demo link</span>
         </p>
       </div>

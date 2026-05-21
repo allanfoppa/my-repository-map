@@ -10,7 +10,6 @@ export function update(searchQuery: string, currentPage: number) {
   const strategy = viewRegistry[mode] || viewRegistry.repositories;
   const perPage = viewRegistry[mode].perPage || 3;
 
-  // Logic is now data-agnostic
   const filtered = strategy.filter(strategy.data, searchQuery);
   const paginated = paginate(filtered, currentPage, perPage);
   const pages = totalPages(filtered.length, perPage);
@@ -22,7 +21,6 @@ export function update(searchQuery: string, currentPage: number) {
     strategy.render(paginated, pages, currentPage, searchQuery),
   );
 
-  // Dynamic Title
   const titleElement = document.querySelector("h1");
   if (titleElement) {
     titleElement.innerHTML = Title(mode);

@@ -1,5 +1,6 @@
 import type { DocItem } from "../types/documentation";
 import { highlight } from "../utils/highlight";
+import { DocumentTags } from "./DocumentTags";
 import { ArrowTopRightOnSquareIcon } from "./Icons";
 
 export function DocumentListItem(doc: DocItem, query: string): string {
@@ -21,25 +22,7 @@ export function DocumentListItem(doc: DocItem, query: string): string {
       <p class="text-sm text-gray-600 leading-relaxed line-clamp-2">${highlight(summary, query)}</p>
 
       <!-- TAGS -->
-      ${
-        doc.tags?.length
-          ? `
-        <div class="pt-2">
-          <div class="flex flex-wrap gap-2">
-          ${doc.tags
-            .map(
-              (tag) => `
-            <span class="py-1 px-2.5 rounded-md ${tag.color} text-white font-semibold text-[10px] uppercase shadow-sm transition-transform hover:scale-105">
-              ${highlight(tag.label, query)}
-            </span>
-          `,
-            )
-            .join("")}
-          </div>
-        </div>
-      `
-          : ""
-      }
+      ${DocumentTags(doc, query)}
 
       <span class="absolute top-6 right-6 text-gray-300 group-hover:text-blue-500 transition-colors">
         ${ArrowTopRightOnSquareIcon()}

@@ -1,6 +1,9 @@
 import type { RepoItem } from "../types/repositories";
 import { highlight } from "../utils/highlight";
 import { CardSectionTitle } from "./CardSectionTitle";
+import { RepoReferencesLink } from "./RepoReferencesLink";
+import { RepoTags } from "./RepoTags";
+import { ViewRepositoryButton } from "./ViewRepositoryButton";
 
 export function RepoCard(repo: RepoItem, query: string): string {
   return `
@@ -26,70 +29,14 @@ export function RepoCard(repo: RepoItem, query: string): string {
           </p>
         </div>
 
-        <a
-          href="${repo.link}"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gray-50 text-gray-600 font-medium text-sm transition-all hover:bg-blue-600 hover:text-white"
-        >
-          View Repository →
-        </a>
+        ${ViewRepositoryButton(repo.link)}
       </div>
 
       <!-- TAGS -->
-      ${
-        repo.tags?.length
-          ? `
-        <div class="border-t border-gray-200 pt-4">
-          ${CardSectionTitle("Tags")}
-          <div class="flex flex-wrap">
-          ${repo.tags
-            .map(
-              (tag) => `
-            <span class="py-1 px-3 my-1 mx-1 rounded-md ${tag.color} text-white font-medium text-xs shadow-sm shadow-blue-100 transition-transform hover:scale-105 cursor-default">
-              ${highlight(tag.label, query)}
-            </span>
-          `,
-            )
-            .join("")}
-          </div>
-        </div>
-      `
-          : ""
-      }
+      ${RepoTags(repo, query)}
+
       <!-- REFERENCES -->
-      ${
-        repo.references?.length
-          ? `
-        <div class="border-t border-gray-200 pt-4">
-          <p class="text-sm text-gray-400 mb-2">References</p>
-
-          <div class="space-y-2">
-            ${repo.references
-              .map(
-                (ref) => `
-              <div class="flex justify-between items-center bg-gray-50 rounded-lg px-3 py-2">
-                <h3 class="text-lg font-bold text-gray-900">
-                  ${highlight(ref.description, query)}
-                </h3>
-                <a
-                  href="${ref.link}"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gray-50 text-gray-600 font-medium text-sm transition-all hover:bg-blue-600 hover:text-white"
-                >
-                  View Code →
-                </a>
-              </div>
-            `,
-              )
-              .join("")}
-          </div>
-        </div>
-      `
-          : ""
-      }
-
+      ${RepoReferencesLink(repo, query)}
     </div>
   `;
 }
