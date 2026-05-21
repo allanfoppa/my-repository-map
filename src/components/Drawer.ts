@@ -1,3 +1,5 @@
+import { XMark } from "./Icons";
+
 export function Drawer(): string {
   return `
     <!-- Documentation Drawer Overlay -->
@@ -9,9 +11,7 @@ export function Drawer(): string {
       <div class="relative w-full max-w-5xl bg-white h-full shadow-2xl transform translate-x-full transition-transform duration-500 flex flex-col">
 
         <button id="close-drawer" class="absolute top-4 right-4 p-2 cursor-pointer text-gray-400 hover:text-gray-600 transition-colors" onclick="closeDrawer()">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
+          ${XMark()}
         </button>
 
         <!-- Markdown Content Area -->

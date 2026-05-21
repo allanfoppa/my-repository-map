@@ -1,4 +1,4 @@
-export type ViewMode = "repositories" | "documentation";
+export type ViewMode = "repositories" | "documentation" | "portfolio";
 
 export const getViewMode = (): ViewMode => {
   const params = new URLSearchParams(window.location.search);

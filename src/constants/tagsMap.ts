@@ -214,6 +214,10 @@ export const TAGS_MAP = {
     label: "Styled Components",
     color: "bg-pink-500",
   },
+  bulma: {
+    label: "Bulma",
+    color: "bg-green-400",
+  },
 
   // Languages
   typescript: {

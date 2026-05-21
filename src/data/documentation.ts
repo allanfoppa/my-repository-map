@@ -55,10 +55,7 @@ export const documentation: DocItem[] = [
     title: "Common MIME Types",
     summary:
       "A reference guide to common MIME types used in web development and APIs.",
-    // Opção 1: CATEGORY_MAP.web (Ideal) ou CATEGORY_MAP.networking
-    // Opção 2: CATEGORY_MAP.tooling (Se não tiver as opções acima)
     category: CATEGORY_MAP.web,
-    // Sugestão de tags corretas para o contexto de redes/web:
     tags: [TAGS_MAP.https, TAGS_MAP.web_development],
   },
   {

@@ -1,26 +1,26 @@
-import { getViewMode } from "./viewState";
+import { getViewMode, type ViewMode } from "./viewState";
+
+// Define the configuration for each tab
+const TABS: { id: string; section: ViewMode }[] = [
+  { id: "#btn-repos", section: "repositories" },
+  { id: "#btn-docs", section: "documentation" },
+  { id: "#btn-portfolio", section: "portfolio" },
+];
 
 export function updateTabsVisual() {
-  const mode = getViewMode();
-  const btnRepos = document.querySelector<HTMLButtonElement>("#btn-repos")!;
-  const btnDocs = document.querySelector<HTMLButtonElement>("#btn-docs")!;
+  const currentMode = getViewMode();
 
-  // Active Classes
-  const activeClasses = ["border-blue-600", "text-blue-600"];
-  // Inactive Classes
-  const inactiveClasses = ["border-transparent", "text-gray-500"];
+  TABS.forEach(({ id, section }) => {
+    const btn = document.querySelector<HTMLButtonElement>(id);
+    if (!btn) return;
 
-  if (mode === "repositories") {
-    btnRepos.classList.add(...activeClasses);
-    btnRepos.classList.remove(...inactiveClasses);
+    const isActive = section === currentMode;
 
-    btnDocs.classList.add(...inactiveClasses);
-    btnDocs.classList.remove(...activeClasses);
-  } else {
-    btnDocs.classList.add(...activeClasses);
-    btnDocs.classList.remove(...inactiveClasses);
+    // Toggle classes based on active state
+    btn.classList.toggle("border-blue-600", isActive);
+    btn.classList.toggle("text-blue-600", isActive);
 
-    btnRepos.classList.add(...inactiveClasses);
-    btnRepos.classList.remove(...activeClasses);
-  }
+    btn.classList.toggle("border-transparent", !isActive);
+    btn.classList.toggle("text-gray-500", !isActive);
+  });
 }

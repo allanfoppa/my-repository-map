@@ -14,7 +14,7 @@ export function Layout({
   content,
 }: LayoutProps): string {
   return `
-    <div class="min-h-screen py-8 px-6">
+    <div class="min-h-screen py-8 px-6" data-testid="layout">
       <div class="max-w-4xl mx-auto">
         ${header}
         ${navbar}

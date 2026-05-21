@@ -1,17 +1,14 @@
-import { HomeView } from "../views/HomeView";
-import { paginate, totalPages } from "./pagination";
-import { getViewMode } from "./viewState";
+import { WrapperView } from "../views/WrapperView";
+import { paginate, totalPages } from "../utils/pagination";
+import { getViewMode } from "../utils/viewState";
 import { viewRegistry } from "../utils/viewRegistry";
-import { bindPaginationEvents } from "./bindPaginationEvents";
+import { bindPaginationEvents } from "../utils/bindPaginationEvents";
 import { Title } from "../components/Title";
 
-export function update(
-  searchQuery: string,
-  currentPage: number,
-  perPage: number,
-) {
+export function update(searchQuery: string, currentPage: number) {
   const mode = getViewMode();
   const strategy = viewRegistry[mode] || viewRegistry.repositories;
+  const perPage = viewRegistry[mode].perPage || 3;
 
   // Logic is now data-agnostic
   const filtered = strategy.filter(strategy.data, searchQuery);
@@ -21,7 +18,7 @@ export function update(
   const container = document.querySelector("#results-container")!;
 
   // Render based on the current strategy
-  container.innerHTML = HomeView(
+  container.innerHTML = WrapperView(
     strategy.render(paginated, pages, currentPage, searchQuery),
   );
 
@@ -32,6 +29,6 @@ export function update(
   }
 
   bindPaginationEvents((page) => {
-    update(searchQuery, page, perPage);
+    update(searchQuery, page);
   });
 }

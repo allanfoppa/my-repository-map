@@ -1,5 +1,6 @@
-import type { RepoItem } from '../types/repositories'
-import { highlight } from '../utils/highlight'
+import type { RepoItem } from "../types/repositories";
+import { highlight } from "../utils/highlight";
+import { CardSectionTitle } from "./CardSectionTitle";
 
 export function RepoCard(repo: RepoItem, query: string): string {
   return `
@@ -7,7 +8,7 @@ export function RepoCard(repo: RepoItem, query: string): string {
 
       <!-- CATEGORY -->
       <div class="border-b border-gray-200 pb-4">
-        <p class="text-sm text-gray-400 my-2">Category</p>
+        ${CardSectionTitle("Category")}
         <h3 class="text-lg font-semibold text-gray-800 flex items-center gap-3">
           ${repo.category}
         </h3>
@@ -16,7 +17,7 @@ export function RepoCard(repo: RepoItem, query: string): string {
       <!-- REPO INFO -->
       <div class="flex justify-between items-center">
         <div class="flex-1">
-          <p class="text-sm text-gray-400 my-2">Title</p>
+          ${CardSectionTitle("Title")}
           <h3 class="text-lg font-bold text-gray-900 transition-colors">
             ${highlight(repo.title, query)}
           </h3>
@@ -40,17 +41,21 @@ export function RepoCard(repo: RepoItem, query: string): string {
         repo.tags?.length
           ? `
         <div class="border-t border-gray-200 pt-4">
-          <p class="text-sm text-gray-400 my-2">Tags</p>
+          ${CardSectionTitle("Tags")}
           <div class="flex flex-wrap">
-          ${repo.tags.map(tag => `
+          ${repo.tags
+            .map(
+              (tag) => `
             <span class="py-1 px-3 my-1 mx-1 rounded-md ${tag.color} text-white font-medium text-xs shadow-sm shadow-blue-100 transition-transform hover:scale-105 cursor-default">
               ${highlight(tag.label, query)}
             </span>
-          `).join('')}
+          `,
+            )
+            .join("")}
           </div>
         </div>
       `
-        : ''
+          : ""
       }
       <!-- REFERENCES -->
       ${
@@ -60,7 +65,9 @@ export function RepoCard(repo: RepoItem, query: string): string {
           <p class="text-sm text-gray-400 mb-2">References</p>
 
           <div class="space-y-2">
-            ${repo.references.map(ref => `
+            ${repo.references
+              .map(
+                (ref) => `
               <div class="flex justify-between items-center bg-gray-50 rounded-lg px-3 py-2">
                 <h3 class="text-lg font-bold text-gray-900">
                   ${highlight(ref.description, query)}
@@ -74,13 +81,15 @@ export function RepoCard(repo: RepoItem, query: string): string {
                   View Code →
                 </a>
               </div>
-            `).join('')}
+            `,
+              )
+              .join("")}
           </div>
         </div>
       `
-          : ''
+          : ""
       }
 
     </div>
-  `
+  `;
 }
