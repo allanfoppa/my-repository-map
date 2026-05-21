@@ -1,13 +1,17 @@
 import type { RepoItem } from "../types/repositories";
 import { highlight } from "../utils/highlight";
 import { CardSectionTitle } from "./CardSectionTitle";
-import { ArrowTopRightOnSquareIcon, CheckIcon } from "./Icons";
+import { ArrowTopRightOnSquareIcon } from "./Icons";
 import { PortfolioTags } from "./PortfolioTags";
+import { LiveDemo, ProjectDocumentation, ScreenShot } from "./WhatIsInside";
 
 export function PortfolioListItens(repo: RepoItem, query: string): string {
+  console.log("AQUIIIIIIIIIII", repo);
+
   return `
    <div
      class="relative premium-card p-4 group space-y-6 hover:border-blue-500 transition-all border border-gray-100 bg-white rounded-xl shadow-sm"
+     onclick="alert('teste')"
    >
       <!-- CATEGORY & TITLE -->
       <div class="h-16">
@@ -28,14 +32,9 @@ export function PortfolioListItens(repo: RepoItem, query: string): string {
 
       <div class="border-t border-gray-200">
         ${CardSectionTitle("What's inside?")}
-        <p class="text-sm flex items-center">
-          ${CheckIcon("size-4 text-blue-600")}
-          <span class="pl-1">4 High-quality screenshots</span>
-        </p>
-        <p class="text-sm mt-2 flex items-center">
-          ${CheckIcon("size-4 text-blue-600")}
-          <span class="pl-1">Live demo link</span>
-        </p>
+        ${ProjectDocumentation()}
+        ${ScreenShot(repo.portfolio.metadata?.screenShots)}
+        ${LiveDemo(repo.portfolio.metadata?.liveDemo)}
       </div>
 
       <span class="absolute top-6 right-6 text-gray-300 group-hover:text-blue-500 transition-colors">

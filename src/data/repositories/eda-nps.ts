@@ -16,6 +16,9 @@ export const edaNps: RepoItem = {
   ],
   portfolio: {
     isAvailable: true,
+    metadata: {
+      liveDemo: "https://allanfoppa.github.io/my-dev-log/?view=repositories",
+    },
   },
   link: "https://github.com/allanfoppa/eda-nps",
   references: [

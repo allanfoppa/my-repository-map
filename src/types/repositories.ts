@@ -1,13 +1,24 @@
 import type { CATEGORY_MAP } from "../constants/categoryMap";
 import type { TAGS_MAP } from "../constants/tagsMap";
 
-export type Reference = {
-  description: string;
-  link: string;
+export type ScreenShot = {
+  page: string;
+  url: string;
+};
+
+export type PortFolioMetadata = {
+  screenShots?: ScreenShot[];
+  liveDemo?: string;
 };
 
 export type Portfolio = {
   isAvailable: Boolean;
+  metadata?: PortFolioMetadata;
+};
+
+export type Reference = {
+  description: string;
+  link: string;
 };
 
 export type RepoItem = {

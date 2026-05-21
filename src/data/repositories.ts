@@ -8,6 +8,7 @@ import { isNotATodoList } from "./repositories/is-not-a-todo-list";
 import { itIsOver9000 } from "./repositories/it-is-over-9000";
 import { plantAr } from "./repositories/plant-ar";
 import { pokemonJokenpo } from "./repositories/pokemon-jokenpo";
+import { rickAndMortyGraphsAndStuff } from "./repositories/rick-and-morty-graphs-and-stuff";
 
 export const repositories: RepoItem[] = [
   itIsOver9000,
@@ -19,4 +20,5 @@ export const repositories: RepoItem[] = [
   edaPokemon,
   edaNps,
   aiQaTestingHub,
+  rickAndMortyGraphsAndStuff,
 ];
