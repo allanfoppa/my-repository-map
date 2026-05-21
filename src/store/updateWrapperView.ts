@@ -3,7 +3,8 @@ import { paginate, totalPages } from "../utils/pagination";
 import { getViewMode } from "../utils/viewState";
 import { viewRegistry } from "../utils/viewRegistry";
 import { bindPaginationEvents } from "../utils/bindPaginationEvents";
-import { Title } from "../components/Title";
+import { RawTitle, Title } from "../components/Title";
+import { updateWindowTitle } from "./updateWindowTitle";
 
 export function update(searchQuery: string, currentPage: number) {
   const mode = getViewMode();
@@ -20,6 +21,8 @@ export function update(searchQuery: string, currentPage: number) {
   container.innerHTML = WrapperView(
     strategy.render(paginated, pages, currentPage, searchQuery),
   );
+
+  updateWindowTitle(RawTitle(mode));
 
   const titleElement = document.querySelector("h1");
   if (titleElement) {
