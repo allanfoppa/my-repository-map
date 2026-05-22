@@ -4,6 +4,13 @@ import type { DocItem } from "../types/documentation";
 
 export const documentation: DocItem[] = [
   {
+    id: "barrel_pattern",
+    title: "Barrel Pattern",
+    summary: "A technique used to simplify and organize imports.",
+    category: CATEGORY_MAP["software-architecture"],
+    tags: [TAGS_MAP.web_development],
+  },
+  {
     id: "git",
     title: "Git Basics",
     summary:
