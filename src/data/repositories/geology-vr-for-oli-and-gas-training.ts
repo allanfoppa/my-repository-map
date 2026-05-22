@@ -9,7 +9,7 @@ export const geologyVrForOliAndGasTraining: RepoItem = {
   category: CATEGORY_MAP["virtual-reality"],
   tags: [TAGS_MAP.virtualreality],
   portfolio: {
-    isAvailable: true,
+    isAvailable: false,
   },
   link: "https://github.com/allanfoppa/geology-vr-for-oil-and-gas-training",
 };

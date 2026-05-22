@@ -7,11 +7,12 @@ import { LiveDemo, ProjectDocumentation, ScreenShot } from "./WhatIsInside";
 
 export function PortfolioListItens(repo: RepoItem, query: string): string {
   console.log("AQUIIIIIIIIIII", repo);
+  const repoSerialized = JSON.stringify(repo).replace(/"/g, "&quot;");
 
   return `
    <div
      class="relative premium-card p-4 group space-y-6 hover:border-blue-500 transition-all border border-gray-100 bg-white rounded-xl shadow-sm"
-     onclick="alert('teste')"
+     onclick="openModal(JSON.parse('${repoSerialized}'))"
    >
       <!-- CATEGORY & TITLE -->
       <div class="h-16">

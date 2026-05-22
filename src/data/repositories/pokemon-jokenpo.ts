@@ -10,7 +10,7 @@ export const pokemonJokenpo: RepoItem = {
   category: CATEGORY_MAP["web-development"],
   tags: [TAGS_MAP.react, TAGS_MAP.node, TAGS_MAP.mysql, TAGS_MAP.docker],
   portfolio: {
-    isAvailable: true,
+    isAvailable: false,
   },
   link: "https://github.com/allanfoppa/pokemon-jokenpo",
 };

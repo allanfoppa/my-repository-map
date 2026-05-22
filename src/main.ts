@@ -8,6 +8,14 @@ import { setViewMode } from "./utils/viewState";
 import { NavBar } from "./modules/NavBar";
 import { updateTabsVisual } from "./utils/tabState";
 import { toggleDrawer } from "./utils/drawerController";
+import {
+  closeLightbox,
+  nextImage,
+  openLightbox,
+  prevImage,
+} from "./utils/lightboxController";
+import { closeModal, openModal } from "./utils/modalController";
+import type { RepoItem } from "./types/repositories";
 
 const app = document.querySelector<HTMLDivElement>("#app")!;
 
@@ -61,6 +69,19 @@ function init() {
   (window as any).closeDrawer = () => {
     toggleDrawer(null, "");
   };
+  (window as any).openLightbox = (
+    images: { url: string; page: string }[],
+    initialIndex: number,
+  ) => {
+    openLightbox(images, initialIndex);
+  };
+  (window as any).closeLightbox = closeLightbox;
+  (window as any).nextImage = nextImage;
+  (window as any).prevImage = prevImage;
+  (window as any).openModal = (repo: RepoItem) => {
+    openModal(repo);
+  };
+  (window as any).closeModal = closeModal;
 
   // Listener for browser navigation (back/forward)
   window.addEventListener("popstate", () => {

@@ -1,4 +1,6 @@
 import { Drawer } from "../components/Drawer";
+import { LightBox } from "../components/Lightbox";
+import { Modal } from "../components/Modal";
 
 type LayoutProps = {
   header: string;
@@ -21,6 +23,8 @@ export function Layout({
         ${search}
         ${content}
         ${Drawer()}
+        ${Modal()}
+        ${LightBox()}
       </div>
     </div>
   `;

@@ -10,7 +10,7 @@ export const plantAr: RepoItem = {
   category: CATEGORY_MAP["augmented-reality"],
   tags: [TAGS_MAP.augmentedreality],
   portfolio: {
-    isAvailable: true,
+    isAvailable: false,
   },
   link: "https://github.com/allanfoppa/plant-ar",
 };

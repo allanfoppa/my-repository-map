@@ -15,10 +15,7 @@ export const edaNps: RepoItem = {
     TAGS_MAP.seaborn,
   ],
   portfolio: {
-    isAvailable: true,
-    metadata: {
-      liveDemo: "https://allanfoppa.github.io/my-dev-log/?view=repositories",
-    },
+    isAvailable: false,
   },
   link: "https://github.com/allanfoppa/eda-nps",
   references: [

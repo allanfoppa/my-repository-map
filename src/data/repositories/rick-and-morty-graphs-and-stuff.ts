@@ -17,11 +17,11 @@ export const rickAndMortyGraphsAndStuff: RepoItem = {
           url: "https://res.cloudinary.com/dcsvknrv0/image/upload/v1779392746/rick-and-morty-graphs-and-stuff-home_yw76ja.png",
         },
         {
-          page: "Modal",
+          page: "Details",
           url: "https://res.cloudinary.com/dcsvknrv0/image/upload/v1779392746/rick-and-morty-graphs-and-stuff-modal_z40fkl.png",
         },
       ],
     },
   },
-  link: "https://github.com/allanfoppa/pokemon-jokenpo",
+  link: "https://github.com/allanfoppa/rick-and-morty-graphs-and-stuff",
 };

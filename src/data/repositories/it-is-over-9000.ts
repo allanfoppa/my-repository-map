@@ -16,7 +16,7 @@ export const itIsOver9000: RepoItem = {
     TAGS_MAP.vite,
   ],
   portfolio: {
-    isAvailable: true,
+    isAvailable: false,
   },
   link: "https://github.com/allanfoppa/it-is-over-9000",
   references: [
