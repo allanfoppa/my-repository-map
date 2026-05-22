@@ -4,6 +4,13 @@ import type { DocItem } from "../types/documentation";
 
 export const documentation: DocItem[] = [
   {
+    id: "pnpm",
+    title: "PNPM",
+    summary: "PNPM Commands.",
+    category: CATEGORY_MAP.tooling,
+    tags: [TAGS_MAP.pnpm],
+  },
+  {
     id: "barrel_pattern",
     title: "Barrel Pattern",
     summary: "A technique used to simplify and organize imports.",
