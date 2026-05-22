@@ -4,6 +4,13 @@ import type { DocItem } from "../types/documentation";
 
 export const documentation: DocItem[] = [
   {
+    id: "testing_pillars",
+    title: "Testing Pillars",
+    summary: "PNPM Commands.",
+    category: CATEGORY_MAP.testing,
+    tags: [TAGS_MAP.bdd, TAGS_MAP.cypress, TAGS_MAP.jest],
+  },
+  {
     id: "pnpm",
     title: "PNPM",
     summary: "PNPM Commands.",
