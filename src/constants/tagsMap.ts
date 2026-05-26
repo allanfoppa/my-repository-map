@@ -70,6 +70,10 @@ export const TAGS_MAP = {
     label: "Express",
     color: "bg-gray-600",
   },
+  fastapi: {
+    label: "FastAPI",
+    color: "bg-green-500",
+  },
 
   // Web tools
   postman: {
@@ -255,6 +259,14 @@ export const TAGS_MAP = {
   ai: {
     label: "AI",
     color: "bg-purple-500",
+  },
+  ocr: {
+    label: "OCR",
+    color: "bg-gray-500",
+  },
+  "scikit-learn": {
+    label: "Scikit-learn",
+    color: "bg-green-500",
   },
 
   // Data science

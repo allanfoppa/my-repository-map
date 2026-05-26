@@ -16,19 +16,19 @@ export const isNotATodoList: RepoItem = {
   portfolio: {
     isAvailable: false,
   },
-  link: "https://github.com/allanfoppa/websocket-with-nestjs-and-reactjs",
+  link: "https://github.com/allanfoppa/is-not-a-todo-list",
   references: [
     {
       description: "Implement websocket with Nestjs",
-      link: "https://github.com/allanfoppa/websocket-with-nestjs-and-reactjs/tree/main/websocket/src/components/people",
+      link: "https://github.com/allanfoppa/is-not-a-todo-list/tree/main/websocket/src/components/people",
     },
     {
       description: "Implement websocket with React context API",
-      link: "https://github.com/allanfoppa/websocket-with-nestjs-and-reactjs/blob/main/client/src/contexts/WebsocketContext.js",
+      link: "https://github.com/allanfoppa/is-not-a-todo-list/blob/main/client/src/contexts/WebsocketContext.js",
     },
     {
       description: "CRUD operations with websocket",
-      link: "https://github.com/allanfoppa/websocket-with-nestjs-and-reactjs/blob/main/client/src/App.js",
+      link: "https://github.com/allanfoppa/is-not-a-todo-list/blob/main/client/src/App.js",
     },
   ],
 };

@@ -2,6 +2,7 @@ export const CATEGORY_MAP = {
   ai: "AI",
   "machine-learning": "Machine Learning",
   "data-science": "Data Science",
+  "computer-vision": "Computer Vision",
 
   "web-development": "Web Development",
   frontend: "Frontend",
