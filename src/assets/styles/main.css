@@ -71,9 +71,17 @@
     border-color: var(--color-warning-500) !important;
   }
 
+  .button-check-recommended:hover {
+    background-color: var(--color-warning-500) !important;
+  }
+
   .review-required {
     border: 1px solid;
     border-color: var(--color-danger-500) !important;
+  }
+
+  .button-review-required:hover {
+    background-color: var(--color-danger-500) !important;
   }
 }
 

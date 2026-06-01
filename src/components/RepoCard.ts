@@ -2,6 +2,7 @@ import type { RepoItem } from "../types/repositories";
 import { highlight } from "../utils/highlight";
 import { CardSectionTitle } from "./CardSectionTitle";
 import { RepoReferencesLink } from "./RepoReferencesLink";
+import { RepoReferencesStatus } from "./RepoReferencesStatus";
 import { RepoTags } from "./RepoTags";
 import { ViewRepositoryButton } from "./ViewRepositoryButton";
 
@@ -10,12 +11,17 @@ export function RepoCard(repo: RepoItem, query: string): string {
     <div class="premium-card p-6 group space-y-4 hover:border-blue-500">
 
       <!-- CATEGORY -->
-      <div class="border-b border-gray-200 pb-4">
-        ${CardSectionTitle("Category")}
-        <h3 class="text-lg font-semibold text-gray-800 flex items-center gap-3">
-          ${repo.category}
-        </h3>
+      <div class="border-b flex justify-between items-center border-gray-200 pb-4">
+        <div>
+          ${CardSectionTitle("Category")}
+          <h3 class="text-lg font-semibold text-gray-800 flex items-center gap-3">
+            ${repo.category}
+          </h3>
+        </div>
+        <!-- REFERENCES STATUS -->
+        ${RepoReferencesStatus(repo)}
       </div>
+
 
       <!-- REPO INFO -->
       <div class="flex justify-between items-center">

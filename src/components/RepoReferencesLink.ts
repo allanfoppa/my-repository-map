@@ -13,19 +13,22 @@ export function RepoReferencesLink(repo: RepoItem, query: string): string {
 
             <div class="space-y-2">
               ${repo.references
-                .map(
-                  (ref) => `
-                <div
-                  class="flex justify-between items-center bg-gray-50 rounded-lg px-3 py-2
-                   ${ref.createdAt ? getReferenceAge(ref.createdAt) : "up-to-date"}"
-                >
-                  <h3 class="text-lg font-bold text-gray-900">
-                    ${highlight(ref.description, query)}
-                  </h3>
-                  ${ViewCodeButton(ref.link)}
-                </div>
-              `,
-                )
+                .map((ref) => {
+                  const ageStatus = ref.createdAt
+                    ? getReferenceAge(ref.createdAt)
+                    : "up-to-date";
+                  return `
+                      <div
+                        class="flex justify-between items-center bg-gray-50 rounded-lg px-3 py-2
+                        ${ageStatus}"
+                      >
+                        <h3 class="text-lg font-bold text-gray-900">
+                          ${highlight(ref.description, query)}
+                        </h3>
+                        ${ViewCodeButton(ref.link, `button-${ageStatus}`)}
+                      </div>
+                      `;
+                })
                 .join("")}
             </div>
           </div>
