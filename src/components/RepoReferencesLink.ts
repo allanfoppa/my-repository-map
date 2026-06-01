@@ -4,15 +4,17 @@ import { ViewCodeButton } from "./ViewCodeButton";
 import { getReferenceAge } from "../utils/getReferenceAge";
 
 export function RepoReferencesLink(repo: RepoItem, query: string): string {
+  const { references } = repo;
+
   return `
     ${
-      repo.references?.length
+      references?.length
         ? `
           <div class="border-t border-gray-200 pt-4">
             <p class="text-sm text-gray-400 mb-2">References</p>
 
             <div class="space-y-2">
-              ${repo.references
+              ${references
                 .map((ref) => {
                   const ageStatus = ref.createdAt
                     ? getReferenceAge(ref.createdAt)

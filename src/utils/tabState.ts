@@ -1,6 +1,5 @@
 import { getViewMode, type ViewMode } from "./viewState";
 
-// Define the configuration for each tab
 const TABS: { id: string; section: ViewMode }[] = [
   { id: "#btn-repos", section: "repositories" },
   { id: "#btn-docs", section: "documentation" },

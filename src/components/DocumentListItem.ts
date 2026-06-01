@@ -4,17 +4,16 @@ import { DocumentTags } from "./DocumentTags";
 import { ArrowTopRightOnSquareIcon } from "./Icons";
 
 export function DocumentListItem(doc: DocItem, query: string): string {
-  const title = doc.title || "Untitled Document";
-  const summary = doc.summary || "No description available.";
+  const { id: docId, title, summary, category } = doc;
 
   return `
    <div
      class="relative premium-card p-6 group space-y-3 hover:border-blue-500 cursor-pointer transition-all border border-gray-100 bg-white rounded-xl shadow-sm"
-     onclick="toggleDrawer('${doc.id}', '${doc.category}')"
+     onclick="toggleDrawer('${docId}', '${category}')"
    >
       <!-- CATEGORY & TITLE -->
       <div class="pr-8">
-        <span class="text-[10px] uppercase tracking-wider text-blue-600 font-bold">${doc.category}</span>
+        <span class="text-[10px] uppercase tracking-wider text-blue-600 font-bold">${category}</span>
         <h3 class="text-lg font-bold text-gray-800 mt-1">${highlight(title, query)}</h3>
       </div>
 

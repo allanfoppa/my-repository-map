@@ -6,8 +6,8 @@ import { PortfolioTags } from "./PortfolioTags";
 import { LiveDemo, ProjectDocumentation, ScreenShot } from "./WhatIsInside";
 
 export function PortfolioListItens(repo: RepoItem, query: string): string {
-  console.log("AQUIIIIIIIIIII", repo);
   const repoSerialized = JSON.stringify(repo).replace(/"/g, "&quot;");
+  const { title, description, portfolio } = repo;
 
   return `
    <div
@@ -17,13 +17,13 @@ export function PortfolioListItens(repo: RepoItem, query: string): string {
       <!-- CATEGORY & TITLE -->
       <div class="h-16">
         ${CardSectionTitle("Project")}
-        <h3 class="font-bold text-gray-800 mt-1">${highlight(repo.title, query)}</h3>
+        <h3 class="font-bold text-gray-800 mt-1">${highlight(title, query)}</h3>
       </div>
 
       <!-- SHORT DESCRIPTION -->
       <div class="border-t border-gray-200">
         ${CardSectionTitle("What's about?")}
-        <p class="text-sm pb-4">${highlight(repo.description, query)}</p>
+        <p class="text-sm pb-4">${highlight(description, query)}</p>
       </div>
 
       <!-- TAGS -->
@@ -34,8 +34,8 @@ export function PortfolioListItens(repo: RepoItem, query: string): string {
       <div class="border-t border-gray-200">
         ${CardSectionTitle("What's inside?")}
         ${ProjectDocumentation()}
-        ${ScreenShot(repo.portfolio.metadata?.screenShots)}
-        ${LiveDemo(repo.portfolio.metadata?.liveDemo)}
+        ${ScreenShot(portfolio.metadata?.screenShots)}
+        ${LiveDemo(portfolio.metadata?.liveDemo)}
       </div>
 
       <span class="absolute top-6 right-6 text-gray-300 group-hover:text-blue-500 transition-colors">

@@ -16,15 +16,12 @@ export function closeLightbox() {
 }
 
 export function nextImage() {
-  console.log("chamou o nextImage");
-
   if (currentImages.length === 0) return;
   currentIndex = (currentIndex + 1) % currentImages.length;
   updateLightbox();
 }
 
 export function prevImage() {
-  console.log("chamou o prevImage");
   if (currentImages.length === 0) return;
   currentIndex =
     (currentIndex - 1 + currentImages.length) % currentImages.length;
