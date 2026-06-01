@@ -19,11 +19,13 @@ export type Portfolio = {
 export type Reference = {
   description: string;
   link: string;
+  createdAt?: Date;
 };
 
 export type RepoItem = {
   id: keyof typeof CATEGORY_MAP;
   title: string;
+  createdAt: Date;
   description: string;
   category: (typeof CATEGORY_MAP)[keyof typeof CATEGORY_MAP];
   tags: (typeof TAGS_MAP)[keyof typeof TAGS_MAP][];

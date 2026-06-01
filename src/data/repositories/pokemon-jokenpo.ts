@@ -5,6 +5,7 @@ import type { RepoItem } from "../../types/repositories";
 export const pokemonJokenpo: RepoItem = {
   id: "web-development",
   title: "Pokemon Jokenpo",
+  createdAt: new Date("2026-04-17"),
   description:
     "My first project in React, a game adapted from the Pokémon franchise.",
   category: CATEGORY_MAP["web-development"],

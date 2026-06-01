@@ -1,6 +1,7 @@
 import type { RepoItem } from "../types/repositories";
 import { highlight } from "../utils/highlight";
 import { ViewCodeButton } from "./ViewCodeButton";
+import { getReferenceAge } from "../utils/getReferenceAge";
 
 export function RepoReferencesLink(repo: RepoItem, query: string): string {
   return `
@@ -14,7 +15,10 @@ export function RepoReferencesLink(repo: RepoItem, query: string): string {
               ${repo.references
                 .map(
                   (ref) => `
-                <div class="flex justify-between items-center bg-gray-50 rounded-lg px-3 py-2">
+                <div
+                  class="flex justify-between items-center bg-gray-50 rounded-lg px-3 py-2
+                   ${ref.createdAt ? getReferenceAge(ref.createdAt) : "up-to-date"}"
+                >
                   <h3 class="text-lg font-bold text-gray-900">
                     ${highlight(ref.description, query)}
                   </h3>

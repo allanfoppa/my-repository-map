@@ -5,6 +5,7 @@ import type { RepoItem } from "../../types/repositories";
 export const edaPokemon: RepoItem = {
   id: "data-science",
   title: "EDA of Pokemon",
+  createdAt: new Date("2026-04-17"),
   description: "Exploratory data analysis of Pokemon",
   category: CATEGORY_MAP["data-science"],
   tags: [
@@ -22,14 +23,17 @@ export const edaPokemon: RepoItem = {
     {
       description: "Data preparation",
       link: "https://github.com/allanfoppa/eda-pokemon/blob/main/data-preparation/pokemon.ipynb",
+      createdAt: new Date("2026-05-20"),
     },
     {
       description: "Initial analysis",
       link: "https://github.com/allanfoppa/eda-pokemon/blob/main/analysis/initial_analysis.ipynb",
+      createdAt: new Date("2026-05-20"),
     },
     {
       description: "Univariate analysis",
       link: "https://github.com/allanfoppa/eda-pokemon/blob/main/analysis/univariate_analysis.ipynb",
+      createdAt: new Date("2026-05-20"),
     },
   ],
 };

@@ -5,6 +5,7 @@ import type { RepoItem } from "../../types/repositories";
 export const worldHappinessReport: RepoItem = {
   id: "data-science",
   title: "World Happiness Report",
+  createdAt: new Date("2026-05-26"),
   description:
     "Postgraduate final project in Artificial Intelligence and Machine Learning at Pontifical Catholic University of Minas Gerais.",
   category: CATEGORY_MAP["data-science"],

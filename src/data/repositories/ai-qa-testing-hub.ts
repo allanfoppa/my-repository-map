@@ -5,6 +5,7 @@ import type { RepoItem } from "../../types/repositories";
 export const aiQaTestingHub: RepoItem = {
   id: "web-development",
   title: "AI QA Testing Hub",
+  createdAt: new Date("2026-04-18"),
   description:
     "Tool-agnostic automation framework designed to consolidate quality assurance for multiple backend and frontend applications.",
   category: CATEGORY_MAP["web-development"],
@@ -28,18 +29,22 @@ export const aiQaTestingHub: RepoItem = {
     {
       description: "Github worflows with Composite Actions",
       link: "https://github.com/allanfoppa/ai-qa-testing-hub/tree/main/.github",
+      createdAt: new Date("2026-05-20"),
     },
     {
       description: "Testing Pillars",
       link: "https://github.com/allanfoppa/ai-qa-testing-hub/blob/main/docs/TESTING_PILLARS.md",
+      createdAt: new Date("2026-05-20"),
     },
     {
       description: "Configure Ollama",
       link: "https://github.com/allanfoppa/ai-qa-testing-hub/blob/main/docs/OLLAMA.md",
+      createdAt: new Date("2026-05-20"),
     },
     {
       description: "Use command line prompts",
       link: "https://github.com/allanfoppa/ai-qa-testing-hub/tree/main/scripts",
+      createdAt: new Date("2026-05-20"),
     },
   ],
 };

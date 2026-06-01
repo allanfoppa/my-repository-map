@@ -5,6 +5,7 @@ import type { RepoItem } from "../../types/repositories";
 export const plantAr: RepoItem = {
   id: "augmented-reality",
   title: "Plant-AR",
+  createdAt: new Date("2026-04-17"),
   description:
     "Augmented reality application for plant identification and care",
   category: CATEGORY_MAP["augmented-reality"],

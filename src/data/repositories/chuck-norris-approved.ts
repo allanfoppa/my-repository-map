@@ -5,6 +5,7 @@ import type { RepoItem } from "../../types/repositories";
 export const chuckNorrisApproved: RepoItem = {
   id: "web-development",
   title: "Chuck Norris Approved",
+  createdAt: new Date("2026-05-20"),
   description:
     "Small web application with Chuck Norris jokes, being my first contact with SolidJS.",
   category: CATEGORY_MAP["web-development"],

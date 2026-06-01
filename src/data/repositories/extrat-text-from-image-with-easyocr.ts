@@ -5,6 +5,7 @@ import type { RepoItem } from "../../types/repositories";
 export const extratTextFromImageWithEasyOcr: RepoItem = {
   id: "computer-vision",
   title: "Extract Text from Image with EasyOCR",
+  createdAt: new Date("2026-05-26"),
   description: "Extract text from images using EasyOCR",
   category: CATEGORY_MAP["computer-vision"],
   tags: [TAGS_MAP.ocr],

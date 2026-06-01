@@ -5,6 +5,7 @@ import type { RepoItem } from "../../types/repositories";
 export const itIsOver9000: RepoItem = {
   id: "web-development",
   title: "It's Over 9000",
+  createdAt: new Date("2026-04-17"),
   description: "A Dragon Ball–themed QA playground using BDD and others",
   category: CATEGORY_MAP["web-development"],
   tags: [
@@ -23,6 +24,7 @@ export const itIsOver9000: RepoItem = {
     {
       description: "BDD with Cucumber",
       link: "https://github.com/allanfoppa/it-is-over-9000/tree/main/bdd",
+      createdAt: new Date("2026-05-20"),
     },
   ],
 };

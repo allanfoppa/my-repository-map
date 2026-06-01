@@ -8,6 +8,14 @@
 
   --color-primary: var(--color-blue-600);
   --color-accent: var(--color-blue-500);
+
+  --color-warning-50: var(--color-amber-50);
+  --color-warning-500: var(--color-amber-500);
+  --color-warning-900: var(--color-amber-900);
+
+  --color-danger-50: var(--color-red-50);
+  --color-danger-500: var(--color-red-500);
+  --color-danger-950: var(--color-red-950);
 }
 
 @layer base {
@@ -51,6 +59,21 @@
 
   .glass-search {
     @apply bg-white/70 backdrop-blur-md border border-white/80 shadow-inner rounded-2xl;
+  }
+
+  .up-to-date {
+    border: none !important;
+    border-color: unset !important;
+  }
+
+  .check-recommended {
+    border: 1px solid;
+    border-color: var(--color-warning-500) !important;
+  }
+
+  .review-required {
+    border: 1px solid;
+    border-color: var(--color-danger-500) !important;
   }
 }
 
