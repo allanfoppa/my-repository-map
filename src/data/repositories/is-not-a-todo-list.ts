@@ -22,17 +22,17 @@ export const isNotATodoList: RepoItem = {
     {
       description: "Implement websocket with Nestjs",
       link: "https://github.com/allanfoppa/is-not-a-todo-list/tree/main/websocket/src/components/people",
-      createdAt: new Date("2026-05-26"),
+      createdAt: new Date("2024-02-09"),
     },
     {
       description: "Implement websocket with React context API",
       link: "https://github.com/allanfoppa/is-not-a-todo-list/blob/main/client/src/contexts/WebsocketContext.js",
-      createdAt: new Date("2026-05-26"),
+      createdAt: new Date("2024-02-08"),
     },
     {
       description: "CRUD operations with websocket",
       link: "https://github.com/allanfoppa/is-not-a-todo-list/blob/main/client/src/App.js",
-      createdAt: new Date("2026-05-26"),
+      createdAt: new Date("2024-02-09"),
     },
   ],
 };

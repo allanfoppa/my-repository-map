@@ -23,17 +23,17 @@ export const edaPokemon: RepoItem = {
     {
       description: "Data preparation",
       link: "https://github.com/allanfoppa/eda-pokemon/blob/main/data-preparation/pokemon.ipynb",
-      createdAt: new Date("2026-05-20"),
+      createdAt: new Date("2023-06-30"),
     },
     {
       description: "Initial analysis",
       link: "https://github.com/allanfoppa/eda-pokemon/blob/main/analysis/initial_analysis.ipynb",
-      createdAt: new Date("2026-05-20"),
+      createdAt: new Date("2023-06-30"),
     },
     {
       description: "Univariate analysis",
       link: "https://github.com/allanfoppa/eda-pokemon/blob/main/analysis/univariate_analysis.ipynb",
-      createdAt: new Date("2026-05-20"),
+      createdAt: new Date("2023-07-14"),
     },
   ],
 };

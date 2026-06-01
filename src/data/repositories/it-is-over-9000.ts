@@ -24,7 +24,7 @@ export const itIsOver9000: RepoItem = {
     {
       description: "BDD with Cucumber",
       link: "https://github.com/allanfoppa/it-is-over-9000/tree/main/bdd",
-      createdAt: new Date("2026-05-20"),
+      createdAt: new Date("2026-04-17"),
     },
   ],
 };

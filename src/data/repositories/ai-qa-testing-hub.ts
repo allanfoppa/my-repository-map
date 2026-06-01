@@ -29,22 +29,22 @@ export const aiQaTestingHub: RepoItem = {
     {
       description: "Github worflows with Composite Actions",
       link: "https://github.com/allanfoppa/ai-qa-testing-hub/tree/main/.github",
-      createdAt: new Date("2026-05-20"),
+      createdAt: new Date("2026-04-13"),
     },
     {
       description: "Testing Pillars",
       link: "https://github.com/allanfoppa/ai-qa-testing-hub/blob/main/docs/TESTING_PILLARS.md",
-      createdAt: new Date("2026-05-20"),
+      createdAt: new Date("2026-04-13"),
     },
     {
       description: "Configure Ollama",
       link: "https://github.com/allanfoppa/ai-qa-testing-hub/blob/main/docs/OLLAMA.md",
-      createdAt: new Date("2026-05-20"),
+      createdAt: new Date("2026-04-13"),
     },
     {
       description: "Use command line prompts",
       link: "https://github.com/allanfoppa/ai-qa-testing-hub/tree/main/scripts",
-      createdAt: new Date("2026-05-20"),
+      createdAt: new Date("2026-04-09"),
     },
   ],
 };

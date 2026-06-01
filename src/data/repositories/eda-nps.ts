@@ -23,17 +23,17 @@ export const edaNps: RepoItem = {
     {
       description: "Data preparation",
       link: "https://github.com/allanfoppa/eda-nps/blob/main/data-preparation/nps.ipynb",
-      createdAt: new Date("2026-05-20"),
+      createdAt: new Date("2023-07-12"),
     },
     {
       description: "Initial analysis",
       link: "https://github.com/allanfoppa/eda-nps/blob/main/analysis/initial_analysis.ipynb",
-      createdAt: new Date("2026-05-20"),
+      createdAt: new Date("2023-07-12"),
     },
     {
       description: "Univariate analysis",
       link: "https://github.com/allanfoppa/eda-nps/blob/main/analysis/univariate_analysis.ipynb",
-      createdAt: new Date("2026-05-20"),
+      createdAt: new Date("2023-06-13"),
     },
   ],
 };
