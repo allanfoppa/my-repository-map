@@ -197,6 +197,12 @@ export const TAGS_MAP = {
     color: "bg-gray-600",
   },
 
+  // Tools
+  command_line: {
+    label: "Command Line",
+    color: "bg-gray-500",
+  },
+
   // Styling
   tailwind: {
     label: "TailwindCSS",

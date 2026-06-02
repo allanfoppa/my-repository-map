@@ -87,4 +87,12 @@ export const documentation: DocItem[] = [
     category: CATEGORY_MAP.tooling,
     tags: [TAGS_MAP.rest, TAGS_MAP.postman],
   },
+  {
+    id: "export-source-code-for-llms",
+    title: "Export Source Code for LLMs",
+    summary:
+      "A guide on how to export source code for use with Large Language Models.",
+    category: CATEGORY_MAP["operating-systems"],
+    tags: [TAGS_MAP.linux, TAGS_MAP.command_line],
+  },
 ];
